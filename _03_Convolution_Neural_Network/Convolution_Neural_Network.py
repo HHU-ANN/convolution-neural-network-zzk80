@@ -17,7 +17,7 @@ def conv3x3(in_channels, out_channels, stride=1):
                      stride=stride, padding=1, bias=False)
 # Resnet 的残差块
 class ResidualBlock(nn.Module):
-    def __init__(self, in_channels, out_channels, stride=1, downsample=None):
+    def __init__(self, in_channels, out_channels, stride=1, downsample=None)：
         super(ResidualBlock, self).__init__()
         self.conv1 = conv3x3(in_channels, out_channels, stride)
         self.bn1 = nn.BatchNorm2d(out_channels)
